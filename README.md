@@ -22,3 +22,34 @@ Esta es mi configuración de Neovim, construida utilizando la plantilla kickstar
     - echasnovski/mini.nvim: Una colección de plugins pequeños y útiles.
     - nvim-treesitter/nvim-treesitter: Para el resaltado de sintaxis y la navegación por el código.
 - Configuración LSP: Configura el LSP con nvim-lspconfig, incluyendo la instalación de servidores de lenguaje con mason.nvim y mason-lspconfig.nvim, y define keymaps y autocommands para las funcionalidades del LSP.
+
+
+Dependencias:
+
+## Formatear código
+Con esta configuración, conform.nvim formateará automáticamente tus archivos PHP al guardarlos, utilizando pint si el proyecto tiene un archivo pint.json y phpfmt si no lo tiene. Esto te proporciona el comportamiento deseado de formateo específico del proyecto.
+
+
+### Instalar intelephense:
+intelephense es un servidor de lenguaje que necesita ser instalado por separado. Puedes instalarlo a través de npm (Node Package Manager). Si no tienes npm instalado, primero deberás instalar Node.js.
+
+- Instalar Node.js y npm (si no los tienes):
+
+```Bash
+sudo apt update
+sudo apt install nodejs npm
+```
+
+- Instalar intelephense globalmente:
+
+```Bash
+sudo npm install -g intelephense
+sudo apt install nodejs npm
+```
+
+### Instalar phpfmt:
+* Si no tienes `phpfmt` instalado, puedes instalarlo usando Composer:
+
+    ```bash
+    composer global require sebastian/phpcpd
+    ```
