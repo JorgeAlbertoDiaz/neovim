@@ -1,30 +1,14 @@
-# Mi Configuración de Neovim
+# Configuración de Neovim
 
-Esta es mi configuración de Neovim, construida utilizando la plantilla [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim) como base.
+Esta es mi configuración de Neovim, construida utilizando la plantilla kickstart.nvim como base ya que esta proporciona un entorno listo para el desarrollo con gestión de plugins, soporte para LSP, autocompletado, snippets y un buen resaltado de sintaxis, todo configurado de manera moderna y eficiente en Lua.
 
-## Características Principales
+Esta plantilla te proporciona una base funcional con las siguientes configuraciones clave:
 
-* **Gestor de Plugins:** Utiliza [lazy.nvim](https://github.com/folke/lazy.nvim) para una gestión eficiente de los plugins, permitiendo instalaciones bajo demanda y tiempos de inicio rápidos.
-* **Tema de Color:** Actualmente utiliza el esquema de color `[Nombre del Tema]`.
-* **LSP (Language Server Protocol):** Configurado con `nvim-lspconfig` para proporcionar funcionalidades inteligentes como autocompletado, diagnóstico de errores y navegación de código para varios lenguajes de programación.
-* **Autocompletado:** Implementado con `nvim-cmp` para un autocompletado potente y flexible.
-* **Linters y Formatters:** Integrados a través de `null-ls.nvim` para asegurar la calidad y consistencia del código.
-* **Navegación por Árbol de Archivos:** Utiliza `nvim-tree.lua` para una exploración intuitiva del sistema de archivos dentro de Neovim.
-* **Barra de Estado:** Personalizada con `lualine.nvim` para mostrar información relevante como el modo, la rama de Git y los errores/warnings.
-* **Telescope:** Implementado para una búsqueda difusa rápida de archivos, buffers, texto y más.
-* **Atajos de Teclado Personalizados:** Se han definido atajos de teclado personalizados en `lua/core/keymaps.lua` para mejorar la eficiencia (menciona aquí algunos atajos clave si lo deseas).
-
-## Instalación
-
-1.  Asegúrate de tener [Neovim](https://neovim.io/) instalado (versión 0.8 o superior recomendada).
-2.  Clona este repositorio en el directorio de configuración de Neovim:
-    ```bash
-    git clone https://github.com/nvim-lua/kickstart.nvim ~/.config/nvim
-    ```
-3.  Abre Neovim (`nvim`). Los plugins se instalarán automáticamente la primera vez.
-
-## Personalización
-
-Puedes personalizar aún más esta configuración editando los archivos dentro de `~/.config/nvim/lua/`. Consulta los archivos individuales para obtener más detalles sobre las opciones disponibles.
-
-## Notas Adicionales
+- Gestor de plugins: Viene preconfigurado con lazy.nvim, un gestor de plugins potente y rápido escrito en Lua. Esto te permite instalar, actualizar y gestionar fácilmente otros plugins.
+Theme: Incluye un tema visual básico pero agradable para empezar. Generalmente, puedes personalizarlo o instalar otros temas fácilmente a través de lazy.nvim.
+- LSP (Language Server Protocol): Ya está configurado para admitir LSP. Esto es crucial para características como autocompletado inteligente, detección de errores en tiempo real, ir a la definición, buscar referencias, etc., para los lenguajes que tengas instalados en tu sistema y para los que instales los servidores de lenguaje correspondientes.
+- Autocompletado: Incorpora nvim-cmp, un motor de autocompletado que funciona en conjunto con LSP y otros "sources" para ofrecerte sugerencias mientras escribes código.
+- Snippets: Trae consigo LuaSnip, un motor para trabajar con fragmentos de código (snippets), lo que te permite insertar estructuras de código comunes de manera rápida.
+- Resaltado de sintaxis y navegación: Incluye tree-sitter, un analizador de código que proporciona un resaltado de sintaxis más preciso y te permite navegar por el código de manera más inteligente.
+- Keymaps básicos: Define algunos atajos de teclado útiles para tareas comunes como navegar por buffers, moverse entre ventanas y gestionar el autocompletado.
+- Configuración en Lua: Toda la configuración está escrita en Lua, el lenguaje recomendado para configurar Neovim debido a su rendimiento y flexibilidad.
